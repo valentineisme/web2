@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rango</title>
+    <link rel="stylesheet" href="{% static "css/base.css" %}"/>
+</head>
+<body>
+
+<h1> Rango </h1>
+
+{% if categories %}
+    <h2>Top 5 Categorias mais curtidas:</h2>
+    <ul>
+        {% for category in categories %}
+            <li><a href="/rango/category/{{ category.slug }}"> {{ category.name }}</a> ({{category.likes}})</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <strong> Não existem categorias cadastradas. </strong>
+{% endif %}
+
+{% if pages %}
+    <h2>Top 5 Páginas mais visitadas:</h2>
+    <ul>
+        {% for page in pages %}
+            <li><a target="_blank" href="{{ page.url }}"> {{ page.title }}</a> ({{page.views}})</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <strong> Não existem páginas cadastradas. </strong>
+{% endif %}
+
+
+<a href="/rango/add_category/">Adicione uma nova Categoria</a><br />
+<a href="/rango/about/">Sobre</a><br />
+
+</body>
+</html>

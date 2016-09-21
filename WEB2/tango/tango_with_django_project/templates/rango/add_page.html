@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rango</title>
+    <link rel="stylesheet" href="{% static "css/base.css" %}"/>
+</head>
+<body>
+{% if category %}
+    <h1> Adiciona uma página na categoria {{ category.name }} </h1>
+
+    <form id="page_form" method="post" action="/rango/category/{{ category.slug }}/add_page/">
+
+        {% csrf_token %}
+        {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+        {% endfor %}
+
+        {% for field in form.visible_fields %}
+            {{ field.errors }}
+            {{ field.help_text }}
+            {{ field }}
+        {% endfor %}
+
+        <input type="submit" name="submit" value="Criar Página na Categoria {{ category.name }}" />
+    </form>
+{% else %}
+    <p> <strong>Esta Categoria não existe.</strong></p>
+{% endif %}
+
+<br/> <a href="/rango/">Home</a><br />
+
+</body>
+</html>

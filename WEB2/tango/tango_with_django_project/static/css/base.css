@@ -1,0 +1,94 @@
+/*
+    Arquivo CSS base
+*/
+
+/*a{*/
+    /*color:#5bb75b;*/
+/*}*/
+
+/*a:hover{*/
+    /*color:gray;*/
+    /*text-decoration: none;*/
+/*}*/
+
+h1, h2, {
+  font-family: Ubuntu;
+}
+
+.errorlist li{
+  color: #ff0000;
+  font-family: Ubuntu, Verdana, Tahoma, Arial, Sans-serif;
+  font-size: 10pt;
+}
+
+.help-block{
+  margin-top: 1px;
+  margin-bottom: 0px;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.form-horizontal .control-label, .form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
+    padding-top: 0px;
+}
+
+
+.form-group{
+  margin-bottom: 5px;
+}
+
+.field-danger, .msg-error{
+  float:left;
+}
+
+body{
+  line-height: 27px;
+}
+
+label{
+  font-weight: normal;
+}
+.alert{
+  margin-bottom: 0px;
+  padding: 2px;
+}
+
+.form-control{
+  height: 30px;
+}
+
+.deletelink{
+  font-weight: bold;
+  color:#ff0000;
+}
+
+p.help{
+  color:#3a87ad;
+}
+
+.tooltip-inner {
+  margin-left: 27px;
+}
+
+.tooltip-arrow{
+  margin-left: 25px;
+}
+
+.tooltip-animal{
+  position: absolute;
+  margin: 185px 883px;
+  line-height: 1.4;
+  width: 200px;
+}
+
+.tooltip-animal-arrow{
+  margin: 204px 881px;
+}
+.btn{
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.list-group{
+  margin-top: 5px;
+}
